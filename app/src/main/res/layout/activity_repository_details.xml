@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/repoName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/repoDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="10"/>
+
+    <TextView
+        android:id="@+id/repoForks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forks: "/>
+
+    <TextView
+        android:id="@+id/repoWatchers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watchers: "/>
+
+    <TextView
+        android:id="@+id/repoOpenIssues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open issues: "/>
+
+    <TextView
+        android:id="@+id/repoParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parent Repository: "
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
