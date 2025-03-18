@@ -26,12 +26,12 @@ class RepositoryDetailsActivity : AppCompatActivity() {
 
         viewModel.repositoryDetails.observe(this) { details ->
             binding.repoName.text = details.name
-            binding.repoDescription.text = details.description ?: "No description"
-            binding.repoForks.text = "Forks: ${details.forks_count}"
-            binding.repoWatchers.text = "Watchers: ${details.watchers_count}"
-            binding.repoOpenIssues.text = "Open issues: ${details.open_issues_count}"
+            binding.repoDescription.text = details.description ?: getString(R.string.no_description)
+            binding.repoForks.text = getString(R.string.forks, details.forks_count)
+            binding.repoWatchers.text = getString(R.string.watchers, details.watchers_count)
+            binding.repoOpenIssues.text = getString(R.string.open_issues, details.open_issues_count)
             details.parent?.let {
-                binding.repoParent.text = "Parent: ${it.full_name}"
+                binding.repoParent.text = getString(R.string.parent, it.full_name)
             }
         }
 

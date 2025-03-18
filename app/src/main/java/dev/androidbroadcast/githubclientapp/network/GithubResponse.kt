@@ -2,7 +2,7 @@ package dev.androidbroadcast.githubclientapp.network
 
 data class Repository(
     val name: String,
-    val description: String,
+    val description: String?,
     val fork: Boolean,
     val owner: Owner
 )
@@ -10,7 +10,7 @@ data class Repository(
 
 data class RepositoryDetails(
     val name: String,
-    val description: String,
+    val description: String?,
     val forks_count: Int,
     val watchers_count: Int,
     val open_issues_count: Int,

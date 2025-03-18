@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">GitHub Client App</string>
+    <string name="forks">Forks: %d</string>
+    <string name="watchers">Watchers: %d</string>
+    <string name="open_issues">Open issues: %d</string>
+    <string name="parent"> Parent: %s</string>
+    <string name="no_description">No description</string>
+    <string name="cannot_find_repositories">Cannot find repositories\n</string>
+    <string name="cannot_load_repositories">Cannot load repositories\n</string>
+    <string name="cannot_load_details">Cannot load details</string>
+    <string name="cannot_load_repository_details">Cannot load repository details</string>
 </resources>

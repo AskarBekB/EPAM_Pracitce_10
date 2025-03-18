@@ -3,18 +3,16 @@ package dev.androidbroadcast.githubclientapp
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import dev.androidbroadcast.githubclientapp.databinding.ActivityMainBinding
 import dev.androidbroadcast.githubclientapp.model.RepositoryViewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val viewModel: RepositoryViewModel by viewModels()
+    private val viewModel: RepositoryViewModel by viewModels { ViewModelProvider.AndroidViewModelFactory.getInstance(application) }
     private val adapter = RepositoryAdapter { repo ->
         RepositoryDetailsActivity.start(this, repo.owner.login, repo.name)
     }
